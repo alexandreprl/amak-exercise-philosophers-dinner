@@ -1,13 +1,4 @@
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
 
 
 <!-- PROJECT SHIELDS -->
@@ -25,7 +16,7 @@
 <br />
 <div align="center">
 
-<h3 align="center">Transporter Robots Exercise</h3>
+<h3 align="center">Philosopher's Dinner Exercise</h3>
 
   <p align="center">
     AMAS Exercise using the AMAK framework
@@ -33,9 +24,9 @@
     <a href="https://github.com/alexandreprl/amak"><strong>AMAK Framework »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/alexandreprl/amak-exercise-transporter-robots/issues">Report Bug</a>
+    <a href="https://github.com/alexandreprl/amak-exercise-philosophers-dinner/issues">Report Bug</a>
     ·
-    <a href="https://github.com/alexandreprl/amak-exercise-transporter-robots/issues">Request Feature</a>
+    <a href="https://github.com/alexandreprl/amak-exercise-philosophers-dinner/issues">Request Feature</a>
   </p>
 </div>
 
@@ -43,13 +34,10 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Exercise
-![Screenshot](https://github.com/alexandreprl/amak-exercise-transporter-robots/blob/main/preview.png?raw=true)
 
-A room contains two area: the pick-up area in green and the drop-off area in red. Multiple boxes are present in the green area and must be moved to the red area.
+A table has X philosophers sitting around it. The philosophers do only two things: think and eat. While eating, they are not thinking, and while thinking, they are not eating. The philosophers share a big plate of spaghetti. There are X forks on the table, one between each pair of adjacent philosophers. To eat, a philosopher needs to pick up the two forks next to him. The problem is to design a protocol for the philosophers that prevents deadlock (two or more philosophers waiting indefinitely for each other to release a fork) and avoids starvation (a philosopher waiting indefinitely to eat).
 
-To do that, a set of autonomous robots have been deployed. These robots can carry one box at a time and drop it anywhere.
-
-The two areas are separated by a wall. To go from one side of the wall to the other, the robots can use two corridors: one at the top one at the bottom. The width of the corridor is such that only one robot can go through it. Also, two robots cannot be at the same location at the same time.
+More infos https://en.wikipedia.org/wiki/Dining_philosophers_problem
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -58,16 +46,21 @@ The two areas are separated by a wall. To go from one side of the wall to the ot
 
 ### Prerequisites
 
-* Fork the project
-* Clone the forked version
+* Click on "Use this template" then "Create a new repository"
+* Clone your new repository
 * Open the project in your favorite IDE
 * Run Launcher.main()
-* Adjust simulation speed
 
 ### Exercise
 
-The class __RobotAgent__ contains the behavior of a transporter robot. A basic version has been implemented in which they randomly move, pick a box if there is one and drop it if they are in the drop zone.
-Remove the content of the method _onDecideAndAct_ and replace it with a cooperative behavior.
+The class __PhilosopherAgent__ contains the behavior of a philosopher. Complete the method _onDecideAndAct_ so that the philosophers are cooperative. The goal is for the philosophers to eat the same quantity.
+
+### Useful methods
+
+* __fork.release(this)__ : release a fork
+* __fork.tryTake(this)__ : try to take a fork, returns false if the fork is already taken
+* __getMostCriticalNeighbor(boolean includingMe)__ : returns the most critical neighbor. If includingMe is true, the current agent is included in the search
+* __eatPastas()__ : eat pastas
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -11,8 +11,12 @@ repositories {
 }
 
 dependencies {
+    // AMAK
     implementation 'com.github.alexandreprl:amak:3.1.2'
 //    implementation project(':amak') // Uncomment this line to get AMAK from local
+
+    // LxPlot
+    implementation 'com.github.alexandreprl:lxplot:2.0.0'
 
     // https://mvnrepository.com/artifact/org.projectlombok/lombok
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.26'
