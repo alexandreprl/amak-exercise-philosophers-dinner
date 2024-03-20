@@ -48,7 +48,7 @@ More infos https://en.wikipedia.org/wiki/Dining_philosophers_problem
 
 * Click on "Use this template" then "Create a new repository"
 * Clone your new repository
-* Open the project in your favorite IDE
+* Open the project in your favorite IDE (Use open project in IntelliJ IDEA or Import Gradle Project in Eclipse)
 * Run Launcher.main()
 
 ### Exercise
