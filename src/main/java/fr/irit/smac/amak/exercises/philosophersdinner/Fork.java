@@ -19,4 +19,7 @@ public class Fork {
 	public synchronized boolean owned(PhilosopherAgent asker) {
 		return takenBy == asker;
 	}
+	public synchronized boolean isOwned() {
+		return takenBy != null;
+	}
 }
