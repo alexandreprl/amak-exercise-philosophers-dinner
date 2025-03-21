@@ -35,7 +35,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Exercise
 
-A table has X philosophers sitting around it. The philosophers do only two things: think and eat. While eating, they are not thinking, and while thinking, they are not eating. The philosophers share a big plate of spaghetti. There are X forks on the table, one between each pair of adjacent philosophers. To eat, a philosopher needs to pick up the two forks next to him. The problem is to design a protocol for the philosophers that prevents deadlock (two or more philosophers waiting indefinitely for each other to release a fork) and avoids starvation (a philosopher waiting indefinitely to eat).
+The goal is to solve the Philosopher's Dinner problem.
 
 More infos https://en.wikipedia.org/wiki/Dining_philosophers_problem
 
